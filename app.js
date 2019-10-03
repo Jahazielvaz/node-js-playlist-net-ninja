@@ -1,22 +1,16 @@
 let express = require('express');
-let app = express();
-let bodyParser = require('body-parser');
-
-// CUSTOM MODULES
 let todoController = require('./controllers/todoController');
 
+let app = express();
 
-let urlencoded = bodyParser.urlencoded({extended: false});
+// Template Engine
+app.set('view engine', 'ejs');
 
-//Template Engine
-app.set('view engine', 'ejs')
-
-//Static Files
+// Static File
 app.use(express.static('./public'));
 
 // Fire Controllers
 todoController(app);
 
-
 app.listen(3000);
-console.log('Application running on port 3000');
+console.log("You're listening to port 3000");
