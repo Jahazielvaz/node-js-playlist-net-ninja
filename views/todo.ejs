@@ -11,13 +11,13 @@
     <div id="todo-table">
       <form class="form" action="/todo" method="post">
         <input type="text" name="item" placeholder="Add New Item" required>
-        <button type="submit" name="button">Add Item</button>
+        <button type="submit" >Add Item</button>
       </form>
 
       <ul>
-        <li>Item1</li>
-        <li>Item2</li>
-        <li>Item3</li>
+        <% data.map((info) => { %>
+          <li><%= info.item %></li>
+        <% })%>
       </ul>
     </div>
   </body>
