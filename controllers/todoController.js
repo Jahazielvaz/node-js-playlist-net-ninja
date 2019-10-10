@@ -9,12 +9,11 @@ module.exports = (app) => {
   let urlencoded = bodyParser.urlencoded({extended: false});
 
   app.get('/todo', (req, res) => {
-    res.render('todo', {data: dataStorage})
+    res.render('todo', {todos: dataStorage})
   });
 
   app.post('/todo', urlencoded, (req, res) => {
 
-    res.render('todo', {item: req.body});
   });
 
   app.delete('/todo', (req, res) => {

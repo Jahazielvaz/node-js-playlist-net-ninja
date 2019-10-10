@@ -15,9 +15,9 @@
       </form>
 
       <ul>
-        <% data.map((info) => { %>
-          <li><%= info.item %></li>
-        <% })%>
+        <% for(let i = 0; i < todos.length; i++){ %>
+          <li><%= todos[i].item %> </li>
+        <% } %>
       </ul>
     </div>
   </body>
