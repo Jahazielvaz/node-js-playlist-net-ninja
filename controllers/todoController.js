@@ -10,7 +10,12 @@ let todoSchema = new mongoose.Schema({
 })
 
 // Todo Model - Remember that the convention for models is tho have the first letter be capital
+let Todo = mongoose.model('Todo', todoSchema)
 
+let sampleItem = Todo({todo: 'This is totally working'}).save((err) => {
+  if(err) throw err
+  console.log('Item Saved')
+})
 
 let data = [
   {item: 'Get Milk'},
