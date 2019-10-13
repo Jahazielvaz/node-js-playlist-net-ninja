@@ -9,7 +9,7 @@ $(document).ready(function(){
         type: 'POST',
         url: '/todo',
         data: todo,
-        success: function(data){
+        success: function(){
           //do something with the data via front-end framework
           location.reload();
         }
@@ -24,7 +24,7 @@ $(document).ready(function(){
       $.ajax({
         type: 'DELETE',
         url: '/todo/' + item,
-        success: function(data){
+        success: function(){
           //do something with the data via front-end framework
           location.reload();
         }

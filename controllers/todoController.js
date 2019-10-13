@@ -36,7 +36,7 @@ module.exports = (app) => {
 
   app.delete('/todo/:item', (req, res) => {
     data = data.filter((todo) => {
-       return todo.item.replace(/ /g, '-') !== req.params.item;
+       return todo.item.replace(/ /g, '-');
     });
     res.json(data);
   });

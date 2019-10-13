@@ -2,6 +2,10 @@ QUESTIONS ABOUT THE AJAX REQUEST
 -How is it connecting to the rest of the Modules?
 -Why are there multiple get and post requests for the same data. We have a request using express, and we have another request using jQuery.
 -How are both requests related?
+  ANSWER: They're not. They're not connected at all. One of them is simply reloading the page, and changing user input spaces to dashes, so param can be valid. This is the jQuery call, whereas the other one is
 -Is the parameter inside the anonymous function called data, the same data that's being passed in the call called data, which contains todo.
+  ANSWER: No. I removed data and realized that it's still working. I think it was simply passed down, so the data can go to a database, as well as be removed from a database. I guess mongoose can input the value of the data parameter.
 -What's the purpose of the following code   var item = $(this).text().replace(/ /g, "-");
+  ANSWER: This is a regular expression. It's replacing all spaces that the user inputs to dashes so that the browser can compile it properly since browsers take spaces to mean separate urls. The g stands for global.
 -Where is location.reload coming from. Is it a pre-set property?
+  ANSWER: It's a built in JS method that has the same function as your reload button. It forces the browser to reload the page from the server side. It's default value is false, so you can manually add a parameter of true in order for it to execute
