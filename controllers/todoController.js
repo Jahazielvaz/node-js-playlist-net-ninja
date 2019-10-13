@@ -1,21 +1,18 @@
 let bodyParser = require('body-parser');
-let mongoose = require('mongoose');
+// let mongoose = require('mongoose');
 
 // Connect To DB
-mongoose.connect('mongodb://test:testing1@ds333238.mlab.com:33238/todo', {useNewUrlParser: true}, {useUnifiedTopology: true})
+// mongoose.connect('mongodb://test:testing1@ds333238.mlab.com:33238/todo', {useNewUrlParser: true}, {useUnifiedTopology: true})
 
 // Create Schema - Blueprint for your data
-let todoSchema = new mongoose.Schema({
-  item: String
-})
+// let todoSchema = new mongoose.Schema({
+//   item: String
+// })
 
 // Todo Model - Remember that the convention for models is tho have the first letter be capital
-let Todo = mongoose.model('Todo', todoSchema)
+// let Todo = mongoose.model('Todo', todoSchema)
 
-let sampleItem = Todo({todo: 'This is totally working'}).save((err) => {
-  if(err) throw err
-  console.log('Item Saved')
-})
+// let sampleItem = Todo({todo: 'This is totally working'}).save()
 
 let data = [
   {item: 'Get Milk'},
